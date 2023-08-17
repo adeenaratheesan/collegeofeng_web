@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="{% static 'css/logincss.css' %}">
+    <style>
+        .loginform{
+            width: 500px;
+            height: 200px;
+            background-color: rgb(195, 200, 212);
+            color: red;
+            font-size: larger;
+            text-align: center;
+
+
+        }
+        .userpassword1{
+            background-color: antiquewhite;
+            color:rgb(100, 33, 234);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: medium;
+            
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_div">
+        <div class="college_name">
+            <h1>COLLEGE OF ENGINEERING VADAKARA</h1>
+            <h5>Under Cape-Govt. of kerala</h5>
+            <h4>An institution accredited by NAAC with 'B+' grade| An ISO 9001 – 2015 certified Institution</h4>
+        </div>
+        <form action="">
+            <div class="loginform">
+            <table>
+                    LOGIN
+                    <tr>
+                        <td>
+                            <div class="userpassword2">Username: <input type="text" placeholder=""></div>
+                                        
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="userpassword2">
+                                Password: <input type="text" placeholder="">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="loginbt">
+                                <input type="button" name="btn_login" value="Login">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="forgotpass">
+                                Forgot <a href="#">password?</a>
+
+                            </div>
+                        </td>
+                    </tr>
+
+                </div>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>

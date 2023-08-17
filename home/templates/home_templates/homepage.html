@@ -1,0 +1,428 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    h1,
+    h4,
+    h5 {
+        text-align: center;
+    }
+
+    #under_cap {
+        color: #a52c23;
+    }
+
+    h1 {
+        color: #ff0404;
+        /* width: 10px; */
+        font-size: 35px;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #8e1414;
+    }
+
+    li {
+        float: left;
+        border-right: 1px solid #bbb;
+    }
+
+    li:last-child {
+        border-right: none;
+    }
+
+    li a {
+        display: block;
+        color: rgb(255, 254, 255);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+        background-color: #d80606;
+        color: rgb(251, 252, 250);
+        /* margin-left: 20px; */
+    }
+
+    .active {
+        background-color: #ff0404;
+        color: white;
+    }
+
+    .topnav-centered {
+        overflow: hidden;
+        /* background-color: #333; */
+    }
+
+    .topnav-centered a {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        text-align: center;
+        padding: 20px;
+        /* margin-left: 80%; */
+        float: left;
+        /* width:20%; */
+    }
+
+
+    .dropdown {
+        float: left;
+        overflow: hidden;
+
+    }
+
+    .dropdown .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        margin-top: 2%;
+        padding: 15px 18px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+
+
+    .dropdown:hover .dropbtn {
+        background-color: red;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .content {
+        box-shadow: 10px;
+        background-color: rgb(226, 231, 231);
+        border-radius: 25px;
+        border: 2px solid #989a96;
+        padding: 20px;
+        width: 1250px;
+        height: autopx;
+        margin-left: 80px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage
+
+    </title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+    <!-- to add symbol"v" to dropdown -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- upto here -->
+
+    <!-- <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}"> -->
+    <!-- <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script> -->
+    <!-- <link rel="stylesheet" href="{% static 'css/logincss.css' %}"> -->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<body>
+    <div class="main">
+        <table width="100%" cellpadding="10" align="center">
+            <tr>
+                <td>
+                    <div class="elephantlogo">
+                        <img src="{% static 'images/elephant.jpg' %}"><br>
+                        <!-- <a href="{% url 'home:login' %}" style="color: rgb(78, 45, 245);">Login</a>
+                        <a href="{% url 'home:onlineadmission' %}" style="color: rgb(78, 45, 245);">Online admission</a> -->
+
+
+
+                    </div>
+                </td>
+
+                <td>
+                    <div class="clg_name" id="clgs">
+                        <!-- {% block clgname %}    {% endblock %} -->
+                        <div>
+                            <h1>COLLEGE OF ENGINEERING VADAKARA demo</h1>
+
+                            <h4><span id="under_cap"><b>Under Cape-Govt. of kerala</b></span>
+                                <br> <span>An Institution accredited by NAAC with
+                                    'B+'
+                                    Grade </span>| An ISO 9001 – 2015 certified Institution
+                            </h4>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+        <div>
+            <div class="navalign">
+
+                <div class="topnav-centered">
+                    <ul>
+
+                        <!-- <li><a href="#contact">*********</a></li> -->
+                        <li>
+
+                            <a class="active" href="#home">Home</a>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <button class="dropbtn">OVERVIEW
+                                    <!-- to add down "v" arrow key to dropdownlist -->
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="#">CAPE</a>
+                                    <a href="#">ABOUT THE INSTITUTION</a>
+                                    <a href="#">PRINCIPAL'S MESSAGE</a>
+                                    <a href="#">CAMPUS</a>
+                                    <a href="#">ACHIEVEMENTS</a>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- <li><a href="#news"></a></li> -->
+                        <li>
+                            <div class="dropdown">
+                                <button class="dropbtn">ACADEMICS
+                                    <!-- to add down "v" arrow key to dropdownlist -->
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="#">ACADEMIC PROGRAMES</a>
+                                    <a href="#">ADMISSION</a>
+                                    <a href="#">ACADEMIC CALENDER</a>
+                                    <a href="#">ACADEMIC COUNCIL</a>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <button class="dropbtn">ADMINISTRATION
+                                    <!-- to add down "v" arrow key to dropdownlist -->
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="#">BOARD OF GOVERNORS</a>
+                                    <a href="#">ORGANIZATIONAL STRUCTURE</a>
+                                    <a href="#">RIGHT TO UNFORMATION</a>
+                                    <a href="#">AICTE</a>
+                                    <a href="#">NIRF</a>
+                                    <a href="#">ADMINISTRATIVE STAFFS</a>
+                                    <a href="#">SCHOLARSHIPS</a>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <button class="dropbtn">DEPARTMENTS
+                                    <!-- to add down "v" arrow key to dropdownlist -->
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="#">CIVIL ENGINEERING</a>
+                                    <a href="#">COMPUTER SCIENCE & ENGINEERING</a>
+                                    <a href="#">INFORMATION TECHNOLOGY</a>
+                                    <a href="#">ELECTRICAL & ELECTRONICS ENGINEERING</a>
+                                    <a href="#">DEPARTMENT OF COMPUTER APPLICATION(DCA)</a>
+                                    <a href="#">SUPPORTING DEPARTMENTS</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <button class="dropbtn">PLACEMENT</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <button class="dropbtn">IQAC</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <button class="dropbtn">MANDATORY BODIES
+                                    <!-- to add down "v" arrow key to dropdownlist -->
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="#">ANTI-RAGGING-COMMITTEE</a>
+                                    <a href="#">GRIEVANCE CELL</a>
+                                    <a href="#">INTERNAL COMPLAINTS COMMITTEE</a>
+                                    <a href="#">COUNSELLINGS CELL</a>
+                                    <a href="#">WOMEN'S FORUM</a>
+                                    <a href="#">STUDENT COUNCIL</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <button class="dropbtn">MORE
+                                    <!-- to add down "v" arrow key to dropdownlist -->
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="#">GALLERY</a>
+                                    <a href="#">EVENTS</a>
+                                    <a href="#">UPCOMMING EVENTS</a>
+                                    <a href="#">PAST EVENTS</a>
+                                    <a href="#">TECHNOLOGY ENABLED LEARNING</a>
+                                    <a href="#">IEEE STUDENTS BRANCH</a>
+                                    <a href="#">ISTE STUDENTS CHAPTER</a>
+                                    <a href="#">RESEARCH AND DEVELOPMENT</a>
+                                    <a href="#">INNOVATION AND ENTREPRENEURSHIP DEVELOPMENT CELL</a>
+                                    <!-- <a href="#"></a>
+                                <a href="#"></a>
+                                <a href="#"></a>
+                                <a href="#"></a> -->
+                                </div>
+                            </div>
+                        </li>
+                        <div class="dropdown">
+                            <button class="dropbtn">SYLLABUS</button>
+                        </div>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div><br>
+
+    <div class="content">
+        <!-- <div>
+            <img class="monsoon" src="{% static 'image/btec_dash.jpg' %}">
+        </div>
+        <div class=" behind">
+            <table class="pinktb">
+                <tr>
+                    <td>
+                        <div class="women"> <img src="{% static 'image/elephant.jpg' %}" width="700px" height="500px">
+                        </div>
+
+
+                        </p>
+                    </td>
+                    <td>
+                        <div class="women"> <img class="sqimg" src="{% static 'image/mtech.jpg' %}" width="750px"
+                                height="700px"> </div>
+
+                    </td>
+                </tr>
+            </table>
+        </div> -->
+
+
+        <div class="container">
+            <h2>Carousel Example</h2>  
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+              </ol>
+          
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                <div class="item active">
+                  <img src="thrishika.jpg" alt="Los Angeles" style="width:100%;">
+                </div>
+          
+                <div class="item">
+                  <img src="monsoon_sparkles4.jpg" alt="Chicago" style="width:100%;">
+                </div>
+              
+                <div class="item">
+                  <img src="thrishika.jpg" alt="New york" style="width:100%;">
+                </div>
+              </div>
+          
+              <!-- Left and right controls -->
+              <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+          
+        iuhfuhfk
+        ipuikyuu
+        Jr59b6EGGoI1aFkw7cmDA6j6gD
+
+
+
+        sha384-BVYiiSIFeK
+        1dGb
+        <br>
+        mJ
+        RA
+        ky
+        cu
+        Hbr
+        <br>
+        A
+        H <br><br><br>bbr
+
+
+        r <br>
+        R
+        g
+        3
+        2
+        O
+        m
+        Ucww7on3RYdg4Vajgj
+    </div>
+
+</body>
+
+</html>

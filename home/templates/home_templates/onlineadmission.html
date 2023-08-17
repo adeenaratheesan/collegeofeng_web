@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online_admission</title>
+   
+</head>
+
+<body>
+    <table border="5px" bgcolor="yellow" height="100%" width="50%">
+        <div class="onlinead">
+
+            <tr>
+                <div class="colgname">
+                    <h1>COLLEGE OF ENGINEERING VADAKARA </h1>
+                </div>
+            </tr>
+            <tr>
+                <div class="course_container">
+                    <div class="courseimg">
+                        <td>
+
+                            <div class="btech">
+                                <a href="{% url 'home:login' %}" style="color: rgb(78, 45, 245);"> <img height=50px
+                                        width=50px src="{% static 'images/btec_dash.jpg' %}">
+                                    B-Tech(Regular)
+                                </a>
+
+                            </div>
+                        </td>
+                        <td>
+                            <div class="btechlateral">
+                                <a href="{% url 'home:login' %}" style="color: rgb(78, 45, 245);"> <img height=50px
+                                        width=50px src="{% static 'images/btec let.jpg' %}">
+                                    B-Tech(Lateral)
+                                </a>
+
+                            </div>
+                        </td>
+                        <td>
+                            <div class="mtech">
+                                <a href="{% url 'home:login' %}" style="color: rgb(78, 45, 245);"> <img height=50px
+                                        width=50px src="{% static 'images/mtech.jpg' %}">
+                                    M-Tech(All)
+                                </a>
+
+                            </div>
+                        </td>
+                        <td>
+                            <div class="phd">
+                                <a href="{% url 'home:login' %}" style="color: rgb(78, 45, 245);"> <img height=50px
+                                        width=50px src="{% static 'images/phd_dash.jpg' %}">
+                                    PHD(All)
+                                </a>
+
+                            </div>
+
+                        </td>
+                    </div>
+
+
+
+                </div>
+
+            </tr>
+
+
+        </div>
+    </table>
+</body>
+
+</html>
